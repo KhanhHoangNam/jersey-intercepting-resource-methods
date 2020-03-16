@@ -54,6 +54,14 @@
                     </webApp>
                 </configuration>
             </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>6</source>
+                    <target>6</target>
+                </configuration>
+            </plugin>
             <!-- Un-comment this plugin to enable automatic registration of HK2 services. -->
             <!--<plugin>
                 <groupId>org.glassfish.hk2</groupId>
