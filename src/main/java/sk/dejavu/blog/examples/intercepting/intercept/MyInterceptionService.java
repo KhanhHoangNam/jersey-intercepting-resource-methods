@@ -1,20 +1,17 @@
 package sk.dejavu.blog.examples.intercepting.intercept;
 
+import org.aopalliance.intercept.ConstructorInterceptor;
+import org.aopalliance.intercept.MethodInterceptor;
+import org.glassfish.hk2.api.Descriptor;
+import org.glassfish.hk2.api.Filter;
+import org.jvnet.hk2.annotations.Service;
+import sk.dejavu.blog.examples.intercepting.providers.StringProvider;
+import sk.dejavu.blog.examples.intercepting.resources.ServerResource;
+
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Method;
 import java.util.Collections;
 import java.util.List;
-
-import org.glassfish.hk2.api.Descriptor;
-import org.glassfish.hk2.api.Filter;
-
-import org.jvnet.hk2.annotations.Service;
-
-import org.aopalliance.intercept.ConstructorInterceptor;
-import org.aopalliance.intercept.MethodInterceptor;
-
-import sk.dejavu.blog.examples.intercepting.providers.StringProvider;
-import sk.dejavu.blog.examples.intercepting.resources.ServerResource;
 
 /**
  * @author Michal Gajdos

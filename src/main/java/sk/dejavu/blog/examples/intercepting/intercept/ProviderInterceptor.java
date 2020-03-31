@@ -4,7 +4,6 @@ import org.aopalliance.intercept.ConstructorInterceptor;
 import org.aopalliance.intercept.ConstructorInvocation;
 import org.aopalliance.intercept.MethodInterceptor;
 import org.aopalliance.intercept.MethodInvocation;
-
 import sk.dejavu.blog.examples.intercepting.providers.StringProvider;
 
 /**
