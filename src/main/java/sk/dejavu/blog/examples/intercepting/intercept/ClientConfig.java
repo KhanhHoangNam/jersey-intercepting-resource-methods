@@ -1,13 +1,12 @@
 package sk.dejavu.blog.examples.intercepting.intercept;
 
+import org.glassfish.jersey.server.ClientBinding;
+import sk.dejavu.blog.examples.intercepting.providers.StringProvider;
+
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
-
-import org.glassfish.jersey.server.ClientBinding;
-
-import sk.dejavu.blog.examples.intercepting.providers.StringProvider;
 
 /**
  * Make sure the injected client doesn't inherit providers from server.
@@ -23,7 +22,7 @@ import sk.dejavu.blog.examples.intercepting.providers.StringProvider;
 )
 public @interface ClientConfig {
 
-    public static class Config extends org.glassfish.jersey.client.ClientConfig {
+    class Config extends org.glassfish.jersey.client.ClientConfig {
 
         public Config() {
             register(StringProvider.class);
